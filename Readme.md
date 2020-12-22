@@ -13,7 +13,7 @@ The pipeline for the project looks as follows:
 
 - The **input** is a dataset of images and 5 sentence descriptions that were collected with Amazon Mechanical Turk. In particular, this code base is set up for [Flickr8K](http://nlp.cs.illinois.edu/HockenmaierGroup/Framing_Image_Description/KCCA.html), [Flickr30K](http://shannon.cs.illinois.edu/DenotationGraph/), and [MSCOCO](http://mscoco.org/) datasets. 
 - In the **training stage**, the images are fed as input to RNN and the RNN is asked to predict the words of the sentence, conditioned on the current word and previous context as mediated by the hidden layers of the neural network. In this stage, the parameters of the networks are trained with backpropagation.
-- In the **prediction stage**, a witheld set of images is passed to RNN and the RNN generates the sentence one word at a time. The results are evaluated with **BLEU score**. The code also includes utilities for visualizing the results in HTML.
+- In the **prediction stage**, a withheld set of images is passed to RNN and the RNN generates the sentence one word at a time. The results are evaluated with **BLEU score**. The code also includes utilities for visualizing the results in HTML.
 
 ## Dependencies
 **Python 2.7**, modern version of **numpy/scipy**, **perl** (if you want to do BLEU score evaluation), **argparse** module. Most of these are okay to install with **pip**. To install all dependencies at once, run the command `pip install -r requirements.txt`
